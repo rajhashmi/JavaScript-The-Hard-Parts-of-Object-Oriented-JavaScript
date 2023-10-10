@@ -78,15 +78,19 @@
     //  this will return a new object but...hmmm..🤔  everytime we create new variable and assign usercreater() this will always retrun increment function as well soo the problem is every user variable has increment function and it will inpect our performance so what we goona do now?
 
     function usercreater2(name,score){
-        let newObject = Object.create({increase : increase});
+        let newObject = Object.create(userFunctionStore);
         newObject.name = name;
         newObject.score = score;
         return newObject
     }
-    function increase(){
-        this.score++
+    const userFunctionStore = {
+        increment : function (){
+            this.score++
+        }
     }
     let newUser = usercreater2('shahid',3);
-    newUser.Name
+    newUser.increment
+
+    
    
 }
