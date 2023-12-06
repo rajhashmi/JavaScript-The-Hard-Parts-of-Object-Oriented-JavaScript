@@ -8,3 +8,14 @@ class createUser{
     }
 
 }
+
+class paidUserCreator extends createUser {
+    constructor(paidUserName,paidUserScore,accountBalance){
+        super(paidUserName,paidUserScore)
+        this.accountBalance = accountBalance
+    }
+    getBalnace(){
+        console.log(this.accountBalance)
+    }
+}
+
